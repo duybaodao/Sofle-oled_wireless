@@ -19,16 +19,49 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
 
     /* Only act on profiles 0 or 1; ignore others. */
     if (ev && (ev->index == 0 || ev->index == 1)) {
-        struct zmk_led_hsb color = {.h = 0, .s = 100, .b = 100}; /* red for profile 0 */
+        // Red (0) or Blue (198) matches user keymap
+        uint16_t hue = (ev->index == 1) ? 198 : 0;
         
-        if (ev->index == 1) {
-            color.h = 220; /* blue for profile 1 */
+        const struct device *rgb_ug_dev = zmk_behavior_get_binding("rgb_ug");
+        
+        if (rgb_ug_dev) {
+            // 1. Turn ON
+            static struct zmk_behavior_binding binding_on = {
+                .param1 = RGB_ON_CMD,
+                .param2 = 0,
+            };
+            binding_on.behavior_dev = rgb_ug_dev;
+            
+            // 2. Set Color
+            static struct zmk_behavior_binding binding_color = {
+                .param1 = RGB_COLOR_HSB_CMD,
+            };
+            binding_color.behavior_dev = rgb_ug_dev;
+            binding_color.param2 = RGB_COLOR_HSB_VAL(hue, 100, 100);
+            
+            struct zmk_behavior_binding_event event = {
+                .position = 0, 
+                .timestamp = k_uptime_get()
+            };
+            
+            // Invoke ON
+            zmk_behavior_invoke_binding(&binding_on, event, true);
+            zmk_behavior_invoke_binding(&binding_on, event, false);
+            
+            k_busy_wait(50000); // 50ms wait
+            
+            // Invoke Color
+            zmk_behavior_invoke_binding(&binding_color, event, true);
+            zmk_behavior_invoke_binding(&binding_color, event, false);
+            
+            LOG_INF("Profile %d -> ON + Hue %d (Behavior)", ev->index, hue);
+        } else {
+             // Fallback to direct local control if behavior not found
+             struct zmk_led_hsb color = {.h = hue, .s = 100, .b = 100};
+             zmk_rgb_underglow_on();
+             zmk_rgb_underglow_set_hsb(color);
+             LOG_WRN("Behavior not found, using direct API (Local only)");
         }
-
-        zmk_rgb_underglow_on();
-        zmk_rgb_underglow_set_hsb(color);
-        
-        LOG_INF("Profile %d active -> Set Hue %d (Direct API)", ev->index, color.h);
     } else {
         LOG_DBG("Profile change ignored (index %d)", ev ? ev->index : -1);
     }
