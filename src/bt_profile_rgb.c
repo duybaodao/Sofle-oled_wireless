@@ -26,26 +26,37 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
         const struct device *rgb_ug_dev = zmk_behavior_get_binding("rgb_ug");
         
         if (rgb_ug_dev) {
-            zmk_rgb_underglow_on(); // Ensure on locally first (helper)
+            // 1. Turn ON (Global Sync)
+            static struct zmk_behavior_binding binding_on = {
+                .param1 = RGB_ON,
+                .param2 = 0,
+            };
+            binding_on.behavior_dev = rgb_ug_dev;
             
-            static struct zmk_behavior_binding binding = {
+            // 2. Set Color (Global Sync)
+            static struct zmk_behavior_binding binding_color = {
                 .param1 = RGB_COLOR_HSB_CMD,
             };
+            binding_color.behavior_dev = rgb_ug_dev;
+            binding_color.param2 = RGB_COLOR_HSB_VAL(hue, 100, 100);
             
-            binding.behavior_dev = rgb_ug_dev;
-            binding.param2 = RGB_COLOR_HSB_VAL(hue, 100, 100);
-            
+            // Use a virtual position to avoid "No behavior assigned" warnings
             struct zmk_behavior_binding_event event = {
-                .position = 0,
+                .position = 2147483647, // INT32_MAX
                 .timestamp = k_uptime_get()
             };
             
-            zmk_behavior_invoke_binding(&binding, event, true);
-            zmk_behavior_invoke_binding(&binding, event, false);
+            // Invoke ON
+            zmk_behavior_invoke_binding(&binding_on, event, true);
+            zmk_behavior_invoke_binding(&binding_on, event, false);
             
-            LOG_INF("Profile %d active -> hue %d (via behavior)", ev->index, hue);
+            // Invoke Color
+            zmk_behavior_invoke_binding(&binding_color, event, true);
+            zmk_behavior_invoke_binding(&binding_color, event, false);
+            
+            LOG_INF("Profile %d active -> RGB ON + Hue %d (via behavior)", ev->index, hue);
         } else {
-            LOG_ERR("Could not find rgb_underglow behavior");
+            LOG_ERR("Could not find rgb_ug behavior");
         }
     } else {
         LOG_DBG("Profile change ignored (index %d)", ev ? ev->index : -1);
