@@ -23,7 +23,7 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
         uint16_t hue = (ev->index == 1) ? 220 : 0;
         
         // Use behavior to ensure split sync works
-        const struct device *rgb_ug_dev = zmk_behavior_get_binding("rgb_underglow");
+        const struct device *rgb_ug_dev = zmk_behavior_get_binding("rgb_ug");
         
         if (rgb_ug_dev) {
             zmk_rgb_underglow_on(); // Ensure on locally first (helper)
