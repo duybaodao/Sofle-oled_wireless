@@ -3,7 +3,6 @@
 #include <zmk/event_manager.h>
 #include <zmk/events/ble_active_profile_changed.h>
 #include <zmk/rgb_underglow.h>
-#include <zmk/rgb.h>
 #include <zmk/ble.h>
 #include <zephyr/logging/log.h>
 
