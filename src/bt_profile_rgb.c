@@ -17,8 +17,8 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
 
     /* Only act on profiles 0 or 1 */
     if (ev && (ev->index == 0 || ev->index == 1)) {
-        // Red (Pos 30) or Blue (Pos 33) based on user keymap (Layer 3)
-        uint32_t pos = (ev->index == 1) ? 33 : 30;
+        // Purple (Pos 30) or Blue (Pos 31) based on user keymap (Layer 3)
+        uint32_t pos = (ev->index == 1) ? 31 : 30;
 
         // Simulate physical keypress on Adjust layer (3) to trigger RGB binding
         // This ensures the event is processed by Split Manager for synchronization.
