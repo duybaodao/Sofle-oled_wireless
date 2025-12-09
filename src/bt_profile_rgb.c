@@ -29,22 +29,24 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
         
         // 2. Raise PRESS Event
         struct zmk_position_state_changed press_ev = {
+            .source = 0, // Local source
             .position = pos,
             .state = true,
             .timestamp = k_uptime_get()
         };
-        ZMK_EVENT_RAISE(new_zmk_position_state_changed(press_ev));
+        raise_zmk_position_state_changed(press_ev);
         
         // 3. Wait for propagation
         k_busy_wait(50000); // 50ms
         
         // 4. Raise RELEASE Event
         struct zmk_position_state_changed release_ev = {
+            .source = 0, // Local source
             .position = pos,
             .state = false,
             .timestamp = k_uptime_get()
         };
-        ZMK_EVENT_RAISE(new_zmk_position_state_changed(release_ev));
+        raise_zmk_position_state_changed(release_ev);
         
         // 5. Restore Layer
         zmk_keymap_layer_deactivate(3, true);
