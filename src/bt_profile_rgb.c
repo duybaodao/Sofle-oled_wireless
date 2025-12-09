@@ -1,12 +1,10 @@
 #include <zephyr/kernel.h>
-#include <zephyr/logging/log.h>
 #include <zmk/event_manager.h>
 #include <zmk/events/ble_active_profile_changed.h>
+#include <zmk/events/rgb_underglow_state_changed.h>
 #include <zmk/rgb_underglow.h>
 #include <zmk/ble.h>
 #include <stdbool.h>
-
-LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #if IS_ENABLED(CONFIG_ZMK_BLE) && (!IS_ENABLED(CONFIG_ZMK_SPLIT) || IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL))
 
@@ -23,9 +21,11 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
 
         zmk_rgb_underglow_on();
         zmk_rgb_underglow_set_hsb(color);
-        LOG_INF("Profile %d active -> hue %d", ev->index, color.h);
-    } else {
-        LOG_DBG("Profile change ignored (index %d)", ev ? ev->index : -1);
+
+        // Notify ZMK that RGB state has changed so it syncs to split peripheral
+        ZMK_EVENT_RAISE(new_zmk_rgb_underglow_state_changed(
+            (struct zmk_rgb_underglow_state_changed){.on = true}
+        ));
     }
 
     return ZMK_EV_EVENT_BUBBLE;
