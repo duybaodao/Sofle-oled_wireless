@@ -24,7 +24,7 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
         
         // Strategy: Simulate actual physical keypress so Split Manager sees it
         // 1. Activate Layer 3 (Adjust)
-        zmk_keymap_layer_activate(3);
+        zmk_keymap_layer_activate(3, true);
         k_busy_wait(10000); // 10ms sync
         
         // 2. Raise PRESS Event
@@ -47,7 +47,7 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
         ZMK_EVENT_RAISE(new_zmk_position_state_changed(release_ev));
         
         // 5. Restore Layer
-        zmk_keymap_layer_deactivate(3);
+        zmk_keymap_layer_deactivate(3, true);
         
         LOG_INF("Profile %d -> Simulated Key Press Pos %d (Layer 3)", ev->index, pos);
 
