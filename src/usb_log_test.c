@@ -28,7 +28,3 @@ static int usb_log_test_init(void) {
 
 // Register init function to run at application startup
 SYS_INIT(usb_log_test_init, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
-
-adffddsafdfsfdadsfdfsfdsaaaaaaaaaaaaaaaa
-afdsfddfss
-adsfdsaf
