@@ -28,11 +28,12 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
         if (rgb_ug_dev) {
             zmk_rgb_underglow_on(); // Ensure on locally first (helper)
             
-            struct zmk_behavior_binding binding = {
-                .behavior_dev = rgb_ug_dev,
+            static struct zmk_behavior_binding binding = {
                 .param1 = RGB_COLOR_HSB_CMD,
-                .param2 = RGB_COLOR_HSB_VAL(hue, 100, 100)
             };
+            
+            binding.behavior_dev = rgb_ug_dev;
+            binding.param2 = RGB_COLOR_HSB_VAL(hue, 100, 100);
             
             struct zmk_behavior_binding_event event = {
                 .position = 0,
