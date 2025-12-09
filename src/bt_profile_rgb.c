@@ -10,9 +10,9 @@
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
-static int handle_ble_profile_changed(const struct zmk_event_header *eh) {
+static int handle_ble_profile_changed(const zmk_event_t *eh) {
     const struct zmk_ble_active_profile_changed *ev =
-        (const struct zmk_ble_active_profile_changed *)eh;
+        as_zmk_ble_active_profile_changed(eh);
 
     /* Only act on profiles 0 or 1; ignore others. */
     if (ev && (ev->index == 0 || ev->index == 1)) {
