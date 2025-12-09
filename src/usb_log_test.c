@@ -1,4 +1,6 @@
 #include <zephyr/kernel.h>
+#include <zephyr/device.h>
+#include <zephyr/init.h>
 #include <zephyr/logging/log.h>
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
@@ -27,4 +29,4 @@ static int usb_log_test_init(void) {
 }
 
 // Register init function to run at application startup
-SYS_INIT(usb_log_test_init, APPLICATION, 90);
+SYS_INIT(usb_log_test_init, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
