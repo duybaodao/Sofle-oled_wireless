@@ -28,7 +28,7 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
         if (rgb_ug_dev) {
             // 1. Turn ON (Global Sync)
             static struct zmk_behavior_binding binding_on = {
-                .param1 = RGB_ON,
+                .param1 = RGB_ON_CMD,
                 .param2 = 0,
             };
             binding_on.behavior_dev = rgb_ug_dev;
