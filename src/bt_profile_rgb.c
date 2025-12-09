@@ -1,14 +1,14 @@
 #include <zephyr/kernel.h>
-#include <stdbool.h>
+#include <zephyr/logging/log.h>
 #include <zmk/event_manager.h>
 #include <zmk/events/ble_active_profile_changed.h>
 #include <zmk/rgb_underglow.h>
 #include <zmk/ble.h>
-#include <zephyr/logging/log.h>
-
-#warning "Compiling bt_profile_rgb.c"
+#include <stdbool.h>
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
+
+#if IS_ENABLED(CONFIG_ZMK_BLE)
 
 static int handle_ble_profile_changed(const zmk_event_t *eh) {
     const struct zmk_ble_active_profile_changed *ev =
@@ -33,3 +33,5 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
 
 ZMK_LISTENER(bt_profile_rgb, handle_ble_profile_changed);
 ZMK_SUBSCRIPTION(bt_profile_rgb, zmk_ble_active_profile_changed);
+
+#endif /* IS_ENABLED(CONFIG_ZMK_BLE) */
