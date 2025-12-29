@@ -22,7 +22,7 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
 
         // Simulate physical keypress on Adjust layer (3) to trigger RGB binding
         // This ensures the event is processed by Split Manager for synchronization.
-        zmk_keymap_layer_activate(3, true);
+        zmk_keymap_layer_activate(3);
         k_busy_wait(10000); // Allow layer state to settle
 
         struct zmk_position_state_changed press_ev = {
@@ -43,7 +43,7 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
         };
         raise_zmk_position_state_changed(release_ev);
 
-        zmk_keymap_layer_deactivate(3, true);
+        zmk_keymap_layer_deactivate(3);
 
         LOG_INF("Profile %d -> Synced RGB via Key %d (Layer 3)", ev->index, pos);
     } else {
