@@ -116,11 +116,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH            &kp DOLLAR  &kp PERCENT                                  &kp CARET         &kp AMPERSAND      &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
-&kp TILDE  &kp F1           &kp F2       &kp F3              &kp F4      &kp F5                                       &kp F6            &kp F7             &kp F8            &kp F9                &kp F10                &kp DELETE
-&trans     &kp LC(A)        &kp EQUAL    &kp PLUS            &kp MINUS   &kp UNDERSCORE                               &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp F11           &kp F12               &kp PAGE_UP            &double_quote
-&trans     &kp LC(Z)        &kp LC(X)    &kp RC(C)           &kp LC(V)   &kp PRINTSCREEN  &bootloader    &bootloader  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON         &kp HOME              &kp PAGE_DOWN          &kp END
-                            &trans       &kp K_CONTEXT_MENU  &trans      &trans           &trans         &trans       &trans            &kp LESS_THAN      &kp GREATER_THAN  &kp QUESTION
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN     &kp HASH            &kp DOLLAR  &kp PERCENT                                  &kp CARET         &kp AMPERSAND      &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&kp TILDE  &kp F1           &kp F2          &kp F3              &kp F4      &kp F5                                       &kp F6            &kp F7             &kp F8            &kp F9                &kp F10                &kp DELETE
+&trans     &kp LC(A)        &kp UNDERSCORE  &kp MINUS           &kp PLUS    &kp EQUAL                                    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp F11           &kp F12               &kp PAGE_UP            &double_quote
+&trans     &kp LC(Z)        &kp LC(X)       &kp RC(C)           &kp LC(V)   &kp PRINTSCREEN  &bootloader    &bootloader  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON         &kp HOME              &kp PAGE_DOWN          &kp END
+                            &trans          &kp K_CONTEXT_MENU  &trans      &trans           &trans         &trans       &trans            &kp LESS_THAN      &kp GREATER_THAN  &kp QUESTION
             >;
         };
 
