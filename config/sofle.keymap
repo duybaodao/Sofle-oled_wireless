@@ -50,7 +50,6 @@
             #binding-cells = <0>;
             bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
         };
-
     };
 
     combos { compatible = "zmk,combos"; };
