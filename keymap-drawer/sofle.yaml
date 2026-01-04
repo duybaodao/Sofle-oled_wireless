@@ -52,8 +52,8 @@ layers:
   - DOWN ARROW
   - RIGHT ARROW
   - LEFT CONTROL
-  - LEFT WIN
-  - LEFT ALT
+  - '&bt_morph LEFT_WIN LEFT_ALT'
+  - '&bt_morph LEFT_ALT LEFT_WIN'
   - {t: SPACE, h: _lower}
   - {t: SPACE, h: LEFT SHIFT}
   - {t: SPACE, h: RIGHT SHIFT}

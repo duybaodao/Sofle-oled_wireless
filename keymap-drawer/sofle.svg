@@ -348,13 +348,13 @@ path.combo {
 <g transform="translate(196, 252)" class="key keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">LEFT</tspan><tspan x="0" dy="1.2em">WIN</tspan>
+<tspan x="0" dy="-1.2em" style="font-size: 78%">&amp;bt_morph</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">LEFT_WIN</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">LEFT_ALT</tspan>
 </text>
 </g>
 <g transform="translate(252, 259)" class="key keypos-52">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">LEFT</tspan><tspan x="0" dy="1.2em">ALT</tspan>
+<tspan x="0" dy="-1.2em" style="font-size: 78%">&amp;bt_morph</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">LEFT_ALT</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">LEFT_WIN</tspan>
 </text>
 </g>
 <g transform="translate(316, 274) rotate(22.5)" class="key keypos-53">

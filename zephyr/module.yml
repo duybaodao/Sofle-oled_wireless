@@ -1,3 +1,5 @@
 name: sofle_oled_wireless_custom
 build:
     cmake: .
+    settings:
+        dts_root: .

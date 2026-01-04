@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2023 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/behaviors.h>
+
+/ {
+    behaviors {
+        bt_morph: bt_morph {
+            compatible = "zmk,behavior-bt-morph";
+            #binding-cells = <2>;
+            display-name = "Bluetooth Morph";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+};
