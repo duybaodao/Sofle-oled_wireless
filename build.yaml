@@ -15,9 +15,9 @@
 include:
   - board: nice_nano_v2
     shield: sofle_left
-    # snippet: zmk-usb-logging # TODO turn off log on done
+    # snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: sofle_right
-    # snippet: zmk-usb-logging # TODO turn off log on done
+    # snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: settings_reset

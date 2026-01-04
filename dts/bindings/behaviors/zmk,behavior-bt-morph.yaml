@@ -1,0 +1,10 @@
+description: Bluetooth Morph Behavior
+
+compatible: "zmk,behavior-bt-morph"
+
+include: two_param.yaml
+
+properties:
+  bindings:
+    type: phandle-array
+    required: true
