@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - '-'
+  - \
   - TAB
   - Q
   - W
@@ -184,7 +184,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   lower:
-  - F11
+  - '`'
   - '!'
   - '@'
   - '#'
@@ -195,8 +195,8 @@ layers:
   - '*'
   - (
   - )
-  - _
-  - F12
+  - '|'
+  - '~'
   - F1
   - F2
   - F3
@@ -210,14 +210,14 @@ layers:
   - DELETE
   - {t: ▽, type: trans}
   - Ctl+A
-  - '`'
-  - '~'
-  - \
-  - '|'
+  - '='
+  - +
+  - '-'
+  - _
   - '{'
   - '}'
-  - +
-  - '='
+  - F11
+  - F12
   - PAGE UP
   - '&double_quote'
   - {t: ▽, type: trans}
