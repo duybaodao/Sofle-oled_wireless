@@ -7,6 +7,10 @@
 #include <zmk/keymap.h>
 #include <stdbool.h>
 
+#define RGB_LAYER 4
+#define RGB_BT1_KEY 32 // green
+#define RGB_BT2_KEY 31 // blue
+
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #if IS_ENABLED(CONFIG_ZMK_BLE) && (!IS_ENABLED(CONFIG_ZMK_SPLIT) || IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL))
@@ -15,14 +19,30 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
     const struct zmk_ble_active_profile_changed *ev =
         as_zmk_ble_active_profile_changed(eh);
 
-    /* Only act on profiles 0 or 1 */
-    if (ev && (ev->index == 0 || ev->index == 1)) {
-        // Cyan (Pos 32) or Purple (Pos 30) based on user keymap (Layer 3)
-        uint32_t pos = (ev->index == 1) ? 30 : 32;
+    if (!ev) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+    uint8_t idx = ev->index;
 
-        // Simulate physical keypress on Adjust layer (3) to trigger RGB binding
+    // Initialize pos to 0, though we will set it in the switch
+    uint32_t pos = 0;
+    switch (idx) {
+        case 0:
+            pos = RGB_BT1_KEY;
+            LOG_INF("BT Profile 0 (Windows) - will trigger RGB key %d", pos);
+            break;
+        case 1:
+            pos = RGB_BT2_KEY;
+            LOG_INF("BT Profile 1 (Mac) - will trigger RGB key %d", pos);
+            break;
+        default:
+            break;
+    }
+
+    if (pos != 0) {
+        // Simulate physical keypress on Adjust layer to trigger RGB binding
         // This ensures the event is processed by Split Manager for synchronization.
-        zmk_keymap_layer_activate(5);
+        zmk_keymap_layer_activate(RGB_LAYER);
         k_busy_wait(10000); // Allow layer state to settle
 
         struct zmk_position_state_changed press_ev = {
@@ -39,15 +59,11 @@ static int handle_ble_profile_changed(const zmk_event_t *eh) {
             .source = 0, // Local
             .position = pos,
             .state = false,
-            .timestamp = k_uptime_get()
+            .timestamp = k_uptime_get()  
         };
         raise_zmk_position_state_changed(release_ev);
 
-        zmk_keymap_layer_deactivate(5);
-
-        LOG_INF("Profile %d -> Synced RGB via Key %d (Layer 3)", ev->index, pos);
-    } else {
-        LOG_DBG("Profile change ignored (index %d)", ev ? ev->index : -1);
+        zmk_keymap_layer_deactivate(RGB_LAYER);
     }
 
     return ZMK_EV_EVENT_BUBBLE;

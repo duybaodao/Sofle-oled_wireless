@@ -22,19 +22,9 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        adjust_layer {
-            if-layers = <2 3>;
-            then-layer = <5>;
-        };
-
-        lower_layer {
-            if-layers = <2>;
-            then-layer = <4>;
-        };
-
-        upper_layer {
-            if-layers = <3>;
-            then-layer = <4>;
+        mac_lower {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
@@ -81,7 +71,7 @@
 &kp TAB         &kp Q   &kp W             &kp E         &kp R         &kp T                                                       &kp Y        &kp U      &kp I          &kp O           &kp P           &kp BACKSPACE
 &kp LSHIFT      &kp A   &kp S             &kp D         &kp F         &kp G                                                       &kp H        &kp J      &kp K          &kp L           &kp UP_ARROW    &kp ENTER
 &kp LEFT_SHIFT  &kp Z   &kp X             &kp C         &kp V         &kp B        &kp C_MUTE              &rgb_ug RGB_TOG        &kp N        &kp M      &kp SEMICOLON  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                        &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 SPACE  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT SPACE  &lt 3 SPACE  &kp COMMA  &kp PERIOD     &kp SLASH
+                        &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 SPACE  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT SPACE  &lt 2 SPACE  &kp COMMA  &kp PERIOD     &kp SLASH
             >;
 
             sensor-bindings =
@@ -99,30 +89,6 @@
             >;
 
             label = "mac";
-        };
-
-        ghost_lower {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "_lower";
-        };
-
-        ghost_upper {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "_upper";
         };
 
         lower_layer {
@@ -143,6 +109,18 @@
 &trans     &kp LC(Z)        &kp LC(X)       &kp RC(C)           &kp LC(V)   &kp PRINTSCREEN  &bootloader    &bootloader  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON         &kp HOME              &kp PAGE_DOWN          &kp END
                             &trans          &kp K_CONTEXT_MENU  &trans      &trans           &trans         &trans       &trans            &kp LESS_THAN      &kp GREATER_THAN  &kp QUESTION
             >;
+        };
+
+        mac_lower_layer {
+            bindings = <
+&trans  &trans     &trans     &trans     &trans     &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(A)  &trans     &trans     &trans     &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(NUMBER_4))  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                   &trans     &trans     &trans     &trans                &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "mac_lower";
         };
 
         adjust_layer {
