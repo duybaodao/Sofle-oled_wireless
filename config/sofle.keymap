@@ -53,6 +53,22 @@
 
     combos { compatible = "zmk,combos"; };
 
+    macros {
+        switch_bt_1: switch_input {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F13 &bt BT_SEL 1>;
+            label = "SWITCH_INPUT";
+        };
+
+        switch_bt_0: switch_bt_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F13 &bt BT_SEL 0>;
+            label = "SWITCH_BT_0";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -133,7 +149,7 @@
 
             label = "adjust";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &none                               &none                               &none                               &none                               &none                             &none
+&bt BT_CLR         &switch_bt_0     &switch_bt_1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &none                               &none                               &none                               &none                               &none                             &none
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                  &none                               &none                               &none                               &none                               &none                             &none
 &none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &rgb_ug RGB_TOG                  &rgb_ug RGB_COLOR_HSB(350,100,100)  &rgb_ug RGB_COLOR_HSB(180,100,100)  &rgb_ug RGB_COLOR_HSB(130,100,100)  &rgb_ug RGB_COLOR_HSB(110,100,100)  &rgb_ug RGB_COLOR_HSB(0,100,100)  &rgb_ug RGB_COLOR_HSB(140,20,100)
 &none              &none            &none            &none            &none            &none            &none    &none  &none                               &none                               &none                               &none                               &none                             &none
