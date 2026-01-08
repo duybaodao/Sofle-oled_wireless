@@ -246,8 +246,8 @@ layers:
   - {t: ▽, type: trans}
   adjust:
   - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
+  - '&switch_bt_0'
+  - '&switch_bt_1'
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
