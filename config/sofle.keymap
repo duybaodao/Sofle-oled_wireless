@@ -56,14 +56,14 @@
         switch_bt_1: switch_input {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F13 &bt BT_SEL 1>;
+            bindings = <&kp LS(F13) &bt BT_SEL 1>;
             label = "SWITCH_INPUT";
         };
 
         switch_bt_0: switch_bt_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F13 &bt BT_SEL 0>;
+            bindings = <&kp LS(F13) &bt BT_SEL 0>;
             label = "SWITCH_BT_0";
         };
     };
