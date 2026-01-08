@@ -244,6 +244,64 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  adjust: ['', F11, F12, F13, F14, F15, '', '', '', '', '', '', '', RGB HUD, RGB HUI, RGB SAD, RGB SAI, RGB EFF, '', '', '', '', '', '', '', RGB BRD, RGB BRI, '',
-    '', RGB TOG, 'RGB COLOR HSB(350,100,100)', 'RGB COLOR HSB(180,100,100)', 'RGB COLOR HSB(130,100,100)', 'RGB COLOR HSB(110,100,100)', 'RGB COLOR HSB(0,100,100)',
-    'RGB COLOR HSB(140,20,100)', '', '', '', '', '&switch_bt_1', '&switch_bt_0', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+  adjust:
+  - ''
+  - F11
+  - F12
+  - F13
+  - F14
+  - F15
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - RGB HUD
+  - RGB HUI
+  - RGB SAD
+  - RGB SAI
+  - RGB EFF
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - RGB BRD
+  - RGB BRI
+  - ''
+  - ''
+  - RGB TOG
+  - RGB COLOR HSB(350,100,100)
+  - RGB COLOR HSB(180,100,100)
+  - RGB COLOR HSB(130,100,100)
+  - RGB COLOR HSB(110,100,100)
+  - RGB COLOR HSB(0,100,100)
+  - RGB COLOR HSB(140,20,100)
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - '&switch_bt_1'
+  - '&switch_bt_0'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
