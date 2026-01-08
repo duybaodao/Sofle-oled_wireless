@@ -7,7 +7,6 @@
 #include "../dts/behaviors/bt_morph.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -149,11 +148,11 @@
 
             label = "adjust";
             bindings = <
-&bt BT_CLR         &switch_bt_0     &switch_bt_1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &none                               &none                               &none                               &none                               &none                             &none
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                  &none                               &none                               &none                               &none                               &none                             &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &rgb_ug RGB_TOG                  &rgb_ug RGB_COLOR_HSB(350,100,100)  &rgb_ug RGB_COLOR_HSB(180,100,100)  &rgb_ug RGB_COLOR_HSB(130,100,100)  &rgb_ug RGB_COLOR_HSB(110,100,100)  &rgb_ug RGB_COLOR_HSB(0,100,100)  &rgb_ug RGB_COLOR_HSB(140,20,100)
-&none              &none            &none            &none            &none            &none            &none    &none  &none                               &none                               &none                               &none                               &none                             &none
-                                    &none            &none            &none            &none            &none    &none  &none                               &none                               &none                               &none
+&none  &kp F11          &kp F12          &kp F13          &kp F14          &kp F15                          &none                               &none                               &none                               &none                               &none                             &none
+&none  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                  &none                               &none                               &none                               &none                               &none                             &none
+&none  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &rgb_ug RGB_TOG                  &rgb_ug RGB_COLOR_HSB(350,100,100)  &rgb_ug RGB_COLOR_HSB(180,100,100)  &rgb_ug RGB_COLOR_HSB(130,100,100)  &rgb_ug RGB_COLOR_HSB(110,100,100)  &rgb_ug RGB_COLOR_HSB(0,100,100)  &rgb_ug RGB_COLOR_HSB(140,20,100)
+&none  &none            &none            &none            &switch_bt_1     &switch_bt_0     &none    &none  &none                               &none                               &none                               &none                               &none                             &none
+                        &none            &none            &none            &none            &none    &none  &none                               &none                               &none                               &none
             >;
         };
     };
