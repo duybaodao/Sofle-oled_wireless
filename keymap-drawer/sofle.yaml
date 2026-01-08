@@ -155,8 +155,8 @@ layers:
   - '='
   - '{'
   - '}'
-  - (
-  - )
+  - ''''
+  - '"'
   - PAGE UP
   - '&double_quote'
   - {t: ▽, type: trans}
