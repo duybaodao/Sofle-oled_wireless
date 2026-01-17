@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
   default:
-  - ESCAPE
+  - {t: ESCAPE, s: '`'}
   - '1'
   - '2'
   - '3'
@@ -62,7 +62,7 @@ layers:
   - DOWN ARROW
   - RIGHT ARROW
   mac:
-  - {t: ESCAPE, s: '`'}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
