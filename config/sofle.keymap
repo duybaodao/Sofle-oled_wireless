@@ -125,11 +125,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH            &kp DOLLAR    &kp PERCENT                                  &kp CARET         &kp AMPERSAND      &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
-&kp TILDE  &kp F1           &kp F2       &kp F3              &kp F4        &kp F5                                       &kp F6            &kp UNDERSCORE     &kp MINUS         &kp PLUS              &kp EQUAL              &kp DELETE
-&trans     &kp LC(A)        &kp LC(S)    &kp LC(D)           &kp LC(PLUS)  &kp LC(G)                                    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp COLON              &double_quote
-&trans     &kp LC(Z)        &kp LC(X)    &kp RC(C)           &kp LC(V)     &kp PRINTSCREEN  &bootloader    &bootloader  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PAGE_UP       &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
-                            &trans       &kp K_CONTEXT_MENU  &trans        &trans           &trans         &trans       &trans            &kp HOME           &kp PAGE_DOWN     &kp END
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH            &kp DOLLAR    &kp PERCENT                                  &kp CARET         &kp AMPERSAND      &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&kp TILDE  &kp F1           &kp F2       &kp F3              &kp F4        &kp F5                                       &kp F6            &kp LEFT_BRACE     &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DELETE
+&trans     &kp LC(A)        &kp LC(S)    &kp LC(D)           &kp LC(PLUS)  &kp LC(G)                                    &kp UNDERSCORE    &kp MINUS          &kp PLUS         &kp EQUAL             &kp COLON              &double_quote
+&trans     &kp LC(Z)        &kp LC(X)    &kp RC(C)           &kp LC(V)     &kp PRINTSCREEN  &bootloader    &bootloader  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp PAGE_UP      &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
+                            &trans       &kp K_CONTEXT_MENU  &trans        &trans           &trans         &trans       &trans            &kp HOME           &kp PAGE_DOWN    &kp END
             >;
         };
 
