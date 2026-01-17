@@ -142,10 +142,10 @@ layers:
   - F4
   - F5
   - F6
-  - _
-  - '-'
-  - +
-  - '='
+  - '{'
+  - '}'
+  - '['
+  - ']'
   - DELETE
   - {t: ▽, type: trans}
   - Ctl+A
@@ -153,10 +153,10 @@ layers:
   - Ctl+D
   - Ctl++
   - Ctl+G
-  - '{'
-  - '}'
-  - ''''
-  - '"'
+  - _
+  - '-'
+  - +
+  - '='
   - ':'
   - '&double_quote'
   - {t: ▽, type: trans}
@@ -167,8 +167,8 @@ layers:
   - PRINTSCREEN
   - '&bootloader'
   - '&bootloader'
-  - '['
-  - ']'
+  - ''''
+  - '"'
   - PAGE UP
   - <
   - '>'
