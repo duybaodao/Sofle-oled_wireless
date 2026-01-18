@@ -35,7 +35,7 @@ layers:
   - J
   - K
   - L
-  - ;
+  - UP ARROW
   - {t: ENTER, h: RIGHT SHIFT}
   - LEFT SHIFT
   - Z
@@ -47,10 +47,10 @@ layers:
   - RGB TOG
   - N
   - M
-  - UP ARROW
-  - ','
-  - .
-  - /
+  - ;
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
   - LEFT CONTROL
   - LEFT WIN
   - LEFT ALT
@@ -58,9 +58,9 @@ layers:
   - {t: SPACE, h: LEFT SHIFT}
   - {t: SPACE, h: RIGHT SHIFT}
   - {t: SPACE, h: lower}
-  - LEFT ARROW
-  - DOWN ARROW
-  - RIGHT ARROW
+  - ','
+  - .
+  - /
   mac:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -157,7 +157,7 @@ layers:
   - '-'
   - +
   - '='
-  - ':'
+  - PAGE UP
   - '&double_quote'
   - {t: ▽, type: trans}
   - Ctl+Z
@@ -169,10 +169,10 @@ layers:
   - '&bootloader'
   - ''''
   - '"'
-  - PAGE UP
-  - <
-  - '>'
-  - '?'
+  - ':'
+  - HOME
+  - PAGE DOWN
+  - END
   - {t: ▽, type: trans}
   - CONTEXT MENU
   - {t: ▽, type: trans}
@@ -180,9 +180,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - HOME
-  - PAGE DOWN
-  - END
+  - <
+  - '>'
+  - '?'
   mac_lower:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
