@@ -149,10 +149,10 @@ layers:
   - DELETE
   - {t: ▽, type: trans}
   - Ctl+A
-  - Ctl+S
-  - Ctl+D
+  - Ctl+-
   - Ctl++
-  - Ctl+G
+  - Ctl+F
+  - Gui+TAB
   - _
   - '-'
   - +
@@ -210,10 +210,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Gui+A
-  - Gui+S
-  - Gui+D
+  - Gui+-
+  - Gui++
   - Gui+F
-  - Gui+G
+  - Ctl+UP ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
