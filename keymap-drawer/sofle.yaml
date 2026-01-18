@@ -56,7 +56,7 @@ layers:
   - LEFT ALT
   - {t: SPACE, h: lower}
   - {t: SPACE, h: LEFT SHIFT}
-  - {t: SPACE, h: RIGHT SHIFT}
+  - {t: SPACE, h: RIGHT CONTROL}
   - {t: SPACE, h: lower}
   - ','
   - .
@@ -117,7 +117,7 @@ layers:
   - LEFT WIN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: SPACE, h: RIGHT GUI}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
