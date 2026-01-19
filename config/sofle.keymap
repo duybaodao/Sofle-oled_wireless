@@ -15,16 +15,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-&lt {
-    hold-while-undecided;
-    hold-while-undecided-linger;
-};
-
-&mt {
-    hold-while-undecided;
-    hold-while-undecided-linger;
-};
-
 / {
     // Activate ADJUST layer by pressing raise and lower
 
@@ -94,7 +84,7 @@
             bindings = <
 &mac_grave_tab  &kp N1  &kp N2            &kp N3        &kp N4        &kp N5                                                         &kp N6       &kp N7     &kp N8         &kp N9          &kp N0          &kp BACKSLASH
 &kp TAB         &kp Q   &kp W             &kp E         &kp R         &kp T                                                          &kp Y        &kp U      &kp I          &kp O           &kp P           &kp BACKSPACE
-&kp LSHIFT      &kp A   &kp S             &kp D         &kp F         &kp G                                                          &kp H        &kp J      &kp K          &kp L           &kp UP_ARROW    &mt RIGHT_SHIFT ENTER
+&kp LSHIFT      &kp A   &kp S             &kp D         &kp F         &kp G                                                          &kp H        &kp J      &kp K          &kp L           &kp UP_ARROW    &kp ENTER
 &kp LEFT_SHIFT  &kp Z   &kp X             &kp C         &kp V         &kp B        &kp C_MUTE                 &rgb_ug RGB_TOG        &kp N        &kp M      &kp SEMICOLON  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
                         &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 SPACE  &mt RIGHT_CONTROL SPACE    &mt RIGHT_SHIFT SPACE  &lt 2 SPACE  &kp COMMA  &kp PERIOD     &kp SLASH
             >;
