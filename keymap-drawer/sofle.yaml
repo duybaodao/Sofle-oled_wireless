@@ -36,7 +36,7 @@ layers:
   - K
   - L
   - UP ARROW
-  - {t: ENTER, h: RIGHT SHIFT}
+  - ENTER
   - LEFT SHIFT
   - Z
   - X
