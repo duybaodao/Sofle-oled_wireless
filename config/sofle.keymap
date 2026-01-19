@@ -15,9 +15,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-hold-while-undecided-linger;
-         hold-while-undecided;};
-
 &lt {
     hold-while-undecided;
     hold-while-undecided-linger;
