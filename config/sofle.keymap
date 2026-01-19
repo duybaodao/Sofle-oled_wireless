@@ -23,6 +23,11 @@ hold-while-undecided-linger;
     hold-while-undecided-linger;
 };
 
+&mt {
+    hold-while-undecided;
+    hold-while-undecided-linger;
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
