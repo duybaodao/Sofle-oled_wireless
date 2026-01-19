@@ -15,7 +15,13 @@
 #define RAISE 2
 #define ADJUST 3
 
-&mt { flavor = "tap-preferred"; };
+hold-while-undecided-linger;
+         hold-while-undecided;};
+
+&lt {
+    hold-while-undecided;
+    hold-while-undecided-linger;
+};
 
 / {
     // Activate ADJUST layer by pressing raise and lower
