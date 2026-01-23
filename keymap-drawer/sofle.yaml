@@ -158,8 +158,8 @@ layers:
   - +
   - '='
   - PAGE UP
-  - '&double_quote'
   - {t: ▽, type: trans}
+  - Gui+SPACE
   - Ctl+Z
   - Ctl+X
   - Ctl+C
@@ -220,7 +220,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+SPACE
   - Gui+Z
   - Gui+X
   - Gui+C
