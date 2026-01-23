@@ -34,19 +34,13 @@
             bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
         };
 
-        double_quote: double_quote {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
-        };
-
         mac_grave_tab: mac_grave_tab {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp ESCAPE>, <&kp GRAVE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_LCTL)>;
-            keep-mods = <(MOD_LGUI|MOD_LCTL)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
     };
 
@@ -118,21 +112,21 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN    &kp HASH            &kp DOLLAR  &kp PERCENT                                  &kp CARET         &kp AMPERSAND      &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
-&kp TILDE  &kp F1           &kp F2         &kp F3              &kp F4      &kp F5                                       &kp F6            &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DELETE
-&trans     &kp LC(A)        &kp LC(MINUS)  &kp LC(PLUS)        &kp LC(F)   &kp LG(TAB)                                  &kp UNDERSCORE    &kp MINUS          &kp PLUS          &kp EQUAL             &kp PAGE_UP            &double_quote
-&trans     &kp LC(Z)        &kp LC(X)      &kp RC(C)           &kp LC(V)   &kp PRINTSCREEN  &bootloader    &bootloader  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp COLON         &kp HOME              &kp PAGE_DOWN          &kp END
-                            &trans         &kp K_CONTEXT_MENU  &trans      &trans           &trans         &trans       &trans            &kp LESS_THAN      &kp GREATER_THAN  &kp QUESTION
+&kp GRAVE      &kp EXCLAMATION  &kp AT_SIGN    &kp HASH            &kp DOLLAR  &kp PERCENT                                  &kp CARET         &kp AMPERSAND      &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&kp TILDE      &kp F1           &kp F2         &kp F3              &kp F4      &kp F5                                       &kp F6            &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DELETE
+&trans         &kp LC(A)        &kp LC(MINUS)  &kp LC(PLUS)        &kp LC(F)   &kp LG(TAB)                                  &kp UNDERSCORE    &kp MINUS          &kp PLUS          &kp EQUAL             &kp PAGE_UP            &trans
+&kp LG(SPACE)  &kp LC(Z)        &kp LC(X)      &kp RC(C)           &kp LC(V)   &kp PRINTSCREEN  &bootloader    &bootloader  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp COLON         &kp HOME              &kp PAGE_DOWN          &kp END
+                                &trans         &kp K_CONTEXT_MENU  &trans      &trans           &trans         &trans       &trans            &kp LESS_THAN      &kp GREATER_THAN  &kp QUESTION
             >;
         };
 
         mac_lower_layer {
             bindings = <
-&trans  &trans     &trans         &trans        &trans     &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans         &trans        &trans     &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(A)  &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(F)  &kp LC(UP_ARROW)                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(Z)  &kp LG(X)      &kp LG(C)     &kp LG(V)  &kp LS(LG(NUMBER_4))  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                   &trans         &trans        &trans     &trans                &trans    &trans  &trans  &trans  &trans  &trans
+&trans         &trans     &trans         &trans        &trans     &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans     &trans         &trans        &trans     &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &kp LG(A)  &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(F)  &kp LC(UP_ARROW)                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(SPACE)  &kp LG(Z)  &kp LG(X)      &kp LG(C)     &kp LG(V)  &kp LS(LG(NUMBER_4))  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans         &trans        &trans     &trans                &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "mac_lower";
