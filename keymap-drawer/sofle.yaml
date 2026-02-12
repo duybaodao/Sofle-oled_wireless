@@ -142,16 +142,16 @@ layers:
   - F4
   - F5
   - F6
-  - '{'
-  - '}'
-  - '['
-  - ']'
+  - F7
+  - F8
+  - F9
+  - F10
   - DELETE
   - {t: ▽, type: trans}
-  - Ctl+A
+  - ''
   - Ctl+-
   - Ctl++
-  - Ctl+F
+  - PRINTSCREEN
   - Gui+TAB
   - _
   - '-'
@@ -160,11 +160,11 @@ layers:
   - PAGE UP
   - {t: ▽, type: trans}
   - Gui+SPACE
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - PRINTSCREEN
+  - ''
+  - '['
+  - ']'
+  - '{'
+  - '}'
   - '&bootloader'
   - '&bootloader'
   - ''''
@@ -209,10 +209,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+A
+  - {t: ▽, type: trans}
   - Gui+-
   - Gui++
-  - Gui+F
+  - Sft+Gui+4
   - Ctl+UP ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -221,11 +221,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+SPACE
-  - Gui+Z
-  - Gui+X
-  - Gui+C
-  - Gui+V
-  - Sft+Gui+4
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -246,23 +246,23 @@ layers:
   - {t: ▽, type: trans}
   adjust:
   - ''
-  - F11
-  - F12
-  - F13
-  - F14
-  - F15
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - ''
-  - ''
   - '&switch_bt_0'
   - '&switch_bt_1'
   - ''
   - ''
   - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F11
+  - F12
+  - F13
+  - F14
+  - F15
   - ''
   - ''
   - ''
