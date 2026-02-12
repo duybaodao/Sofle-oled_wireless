@@ -51,11 +51,11 @@ layers:
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - LEFT ALT
+  - '&smart_alt_ctrl'
   - LEFT WIN
   - '&smart_ctrl_alt'
   - {t: SPACE, h: lower}
-  - {t: SPACE, h: RIGHT CONTROL}
+  - {t: SPACE, h: LEFT SHIFT}
   - {t: SPACE, h: RIGHT SHIFT}
   - {t: SPACE, h: lower}
   - ','
@@ -116,7 +116,7 @@ layers:
   - LEFT ALT
   - LEFT WIN
   - {t: ▽, type: trans}
-  - {t: SPACE, h: RIGHT ALT}
+  - {t: SPACE, h: LEFT SHIFT}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
