@@ -1,5 +1,6 @@
 target_sources(app PRIVATE 
     src/behaviors/behavior_bt_morph.c 
+    src/behaviors/behavior_smart_ctrl_alt.c
     src/dual_key_layer.c
     src/events/mac_connection_changed.c
     src/mac_profile_monitor.c

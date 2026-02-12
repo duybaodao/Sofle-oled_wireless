@@ -1,0 +1,17 @@
+/*
+ * Copyright (c) 2024 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/behaviors.h>
+
+/ {
+    behaviors {
+        smart_ctrl_alt: smart_ctrl_alt {
+            compatible = "zmk,behavior-smart-ctrl-alt";
+            #binding-cells = <0>;
+            display-name = "Smart Ctrl/Alt";
+        };
+    };
+};

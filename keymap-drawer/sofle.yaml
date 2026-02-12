@@ -51,9 +51,9 @@ layers:
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - LEFT CONTROL
-  - LEFT WIN
   - LEFT ALT
+  - LEFT WIN
+  - '&smart_ctrl_alt'
   - {t: SPACE, h: lower}
   - {t: SPACE, h: RIGHT CONTROL}
   - {t: SPACE, h: RIGHT SHIFT}
@@ -74,6 +74,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -111,12 +112,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT CONTROL
   - LEFT ALT
   - LEFT WIN
   - {t: ▽, type: trans}
-  - {t: SPACE, h: RIGHT GUI}
+  - {t: SPACE, h: RIGHT ALT}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

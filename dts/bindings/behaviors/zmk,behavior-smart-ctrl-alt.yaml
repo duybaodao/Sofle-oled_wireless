@@ -1,0 +1,3 @@
+description: Smart Ctrl/Alt behavior
+
+compatible: "zmk,behavior-smart-ctrl-alt"
