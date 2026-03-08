@@ -78,11 +78,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&mac_grave_tab  &kp N1  &kp N2           &kp N3        &kp N4           &kp N5                                                      &kp N6       &kp N7     &kp N8         &kp N9          &kp N0          &kp BACKSLASH
-&kp TAB         &kp Q   &kp W            &kp E         &kp R            &kp T                                                       &kp Y        &kp U      &kp I          &kp O           &kp P           &kp BACKSPACE
-&kp LSHIFT      &kp A   &kp S            &kp D         &kp F            &kp G                                                       &kp H        &kp J      &kp K          &kp L           &kp UP_ARROW    &kp ENTER
-&kp LEFT_SHIFT  &kp Z   &kp X            &kp C         &kp V            &kp B        &kp C_MUTE              &rgb_ug RGB_TOG        &kp N        &kp M      &kp SEMICOLON  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                        &smart_alt_ctrl  &kp LEFT_WIN  &smart_ctrl_alt  &lt 2 SPACE  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT SPACE  &lt 2 SPACE  &kp COMMA  &kp PERIOD     &kp SLASH
+&mac_grave_tab  &kp N1  &kp N2           &kp N3        &kp N4           &kp N5                                               &kp N6                 &kp N7     &kp N8         &kp N9          &kp N0          &kp BACKSLASH
+&kp TAB         &kp Q   &kp W            &kp E         &kp R            &kp T                                                &kp Y                  &kp U      &kp I          &kp O           &kp P           &kp BACKSPACE
+&kp LSHIFT      &kp A   &kp S            &kp D         &kp F            &kp G                                                &kp H                  &kp J      &kp K          &kp L           &kp UP_ARROW    &kp ENTER
+&kp LEFT_SHIFT  &kp Z   &kp X            &kp C         &kp V            &kp B                 &kp C_MUTE    &rgb_ug RGB_TOG  &kp N                  &kp M      &kp SEMICOLON  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                        &smart_alt_ctrl  &kp LEFT_WIN  &smart_ctrl_alt  &mt LEFT_SHIFT SPACE  &mo 2         &mo 2            &mt RIGHT_SHIFT SPACE  &kp COMMA  &kp PERIOD     &kp SLASH
             >;
 
             sensor-bindings =
@@ -92,11 +92,11 @@
 
         mac_layer {
             bindings = <
-&trans   &trans  &trans            &trans        &trans        &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB  &trans  &trans            &trans        &trans        &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans  &trans            &trans        &trans        &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans  &trans            &trans        &trans        &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &trans  &mt LEFT_SHIFT SPACE    &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans            &trans        &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB  &trans  &trans            &trans        &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans            &trans        &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans            &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "mac";
@@ -144,11 +144,11 @@
 
             label = "adjust";
             bindings = <
-&none   &switch_bt_0     &switch_bt_1     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_CLR                        &none                               &none                               &none                               &none                               &none                             &none
-&none   &kp F11          &kp F12          &kp F13          &kp F14          &kp F15                           &none                               &none                               &none                               &none                               &none                             &none
-&trans  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                   &rgb_ug RGB_COLOR_HSB(350,100,100)  &rgb_ug RGB_COLOR_HSB(180,100,100)  &rgb_ug RGB_COLOR_HSB(130,100,100)  &rgb_ug RGB_COLOR_HSB(110,100,100)  &rgb_ug RGB_COLOR_HSB(0,100,100)  &rgb_ug RGB_COLOR_HSB(140,20,100)
-&trans  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &rgb_ug RGB_TOG  &none     &none  &none                               &none                               &none                               &none                               &none                             &none
-                         &trans           &trans           &trans           &none            &trans    &none  &none                               &none                               &none                               &none
+&none   &switch_bt_0     &switch_bt_1     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_CLR                         &none                               &none                               &none                               &none                               &none                             &none
+&none   &kp F11          &kp F12          &kp F13          &kp F14          &kp F15                            &none                               &none                               &none                               &none                               &none                             &none
+&trans  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                    &rgb_ug RGB_COLOR_HSB(350,100,100)  &rgb_ug RGB_COLOR_HSB(180,100,100)  &rgb_ug RGB_COLOR_HSB(130,100,100)  &rgb_ug RGB_COLOR_HSB(110,100,100)  &rgb_ug RGB_COLOR_HSB(0,100,100)  &rgb_ug RGB_COLOR_HSB(140,20,100)
+&trans  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &rgb_ug RGB_TOG  &none     &none   &none                               &none                               &none                               &none                               &none                             &none
+                         &trans           &trans           &trans           &none            &trans    &trans  &none                               &none                               &none                               &none
             >;
         };
     };
