@@ -12,8 +12,8 @@
 #include <stdbool.h>
 
 #define DUAL_KEY_LAYER 4
-#define LEFT_MOD_POS 53
-#define RIGHT_MOD_POS 56
+#define LEFT_MOD_POS 54
+#define RIGHT_MOD_POS 55
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
