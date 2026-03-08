@@ -8,7 +8,7 @@
 #include <stdbool.h>
 
 #define RGB_LAYER 4
-#define RGB_BT1_KEY 32 // green
+#define RGB_BT1_KEY 35 // white
 #define RGB_BT2_KEY 31 // blue
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
