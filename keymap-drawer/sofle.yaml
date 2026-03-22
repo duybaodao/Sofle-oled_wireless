@@ -54,10 +54,10 @@ layers:
   - '&smart_alt_ctrl'
   - LEFT WIN
   - '&smart_ctrl_alt'
+  - {t: SPACE, h: lower}
   - {t: SPACE, h: LEFT SHIFT}
-  - lower
-  - lower
   - {t: SPACE, h: RIGHT SHIFT}
+  - {t: SPACE, h: lower}
   - ','
   - .
   - /
@@ -176,8 +176,8 @@ layers:
   - {t: ▽, type: trans}
   - CONTEXT MENU
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - <
@@ -237,8 +237,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -299,8 +299,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - ''
   - ''
   - ''
