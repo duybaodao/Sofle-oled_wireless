@@ -123,7 +123,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   lower:
-  - '`'
+  - Alt+F4
   - '!'
   - '@'
   - '#'
@@ -135,7 +135,7 @@ layers:
   - (
   - )
   - '|'
-  - '~'
+  - Gui+SPACE
   - F1
   - F2
   - F3
@@ -147,7 +147,7 @@ layers:
   - F9
   - F10
   - DELETE
-  - {t: ▽, type: trans}
+  - '`'
   - ''
   - Ctl+-
   - Ctl++
@@ -159,7 +159,7 @@ layers:
   - '='
   - PAGE UP
   - {t: ▽, type: trans}
-  - Gui+SPACE
+  - '~'
   - ''
   - '['
   - ']'
@@ -184,6 +184,7 @@ layers:
   - '>'
   - '?'
   mac_lower:
+  - Gui+W
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -195,8 +196,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+SPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -220,7 +220,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+SPACE
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
