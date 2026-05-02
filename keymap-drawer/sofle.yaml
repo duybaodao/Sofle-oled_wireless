@@ -148,7 +148,7 @@ layers:
   - F10
   - DELETE
   - '`'
-  - ''
+  - KP NUMLOCK
   - Ctl+-
   - Ctl++
   - PRINTSCREEN
@@ -160,7 +160,7 @@ layers:
   - PAGE UP
   - {t: ▽, type: trans}
   - '~'
-  - ''
+  - CAPSLOCK
   - '['
   - ']'
   - '{'
