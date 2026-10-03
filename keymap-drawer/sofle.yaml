@@ -245,7 +245,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   adjust:
-  - ''
+  - BT CLR
   - '&switch_bt_0'
   - '&switch_bt_1'
   - {t: BT, h: '0'}
