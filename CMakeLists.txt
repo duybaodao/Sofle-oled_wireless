@@ -6,7 +6,6 @@ target_sources(app PRIVATE
     src/events/mac_connection_changed.c
     src/mac_profile_monitor.c
     src/mac_layer_handler.c
-    src/bt_profile_rgb.c
 )
 
 target_include_directories(app PRIVATE src)
